@@ -357,18 +357,6 @@
 			</snapshots>
 		</repository>
 		<repository>
-			<id>qcadoo-snapshots-repository</id>
-			<url>http://emhyr.local/nexus/content/repositories/snapshots</url>
-			<releases>
-				<enabled>false</enabled>
-				<updatePolicy>never</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>interval:5</updatePolicy>
-			</snapshots>
-		</repository>
-		<repository>
 			<id>jboss-repository</id>
 			<url>https://repository.jboss.org/nexus/content/groups/public/</url>
 			<layout>default</layout>
@@ -438,18 +426,6 @@
 				<updatePolicy>never</updatePolicy>
 			</snapshots>
 		</pluginRepository>
-		<pluginRepository>
-			<id>qcadoo-snapshots-plugin-repository</id>
-			<url>http://emhyr.local/nexus/content/repositories/snapshots</url>
-			<releases>
-				<enabled>false</enabled>
-				<updatePolicy>never</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>interval:5</updatePolicy>
-			</snapshots>
-		</pluginRepository>
 	</pluginRepositories>
 
 	<scm>
@@ -463,10 +439,5 @@
 			<id>qcadoo-releases-repository</id>
 			<url>http://nexus.qcadoo.org/content/repositories/releases</url>
 		</repository>
-		<snapshotRepository>
-			<id>qcadoo-snapshots-repository</id>
-			<url>http://emhyr.local/nexus/content/repositories/snapshots</url>
-			<uniqueVersion>false</uniqueVersion>
-		</snapshotRepository>
 	</distributionManagement>
 </project>
