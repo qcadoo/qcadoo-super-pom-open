@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
- 
-    <groupId>com.qcadoo.maven</groupId>
-    <artifactId>qcadoo-super-pom</artifactId>
-    <packaging>pom</packaging>
-    <version>0.0.1</version>
-    <name>Qcadoo Maven Super POM - Open</name>
-    
-    <properties>
-        <maven.version>3.0.3</maven.version>
-        <spring.version>3.1.0.RELEASE</spring.version>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.qcadoo.maven</groupId>
+	<artifactId>qcadoo-super-pom</artifactId>
+	<packaging>pom</packaging>
+	<version>0.0.1</version>
+	<name>Qcadoo Maven Super POM - Open</name>
+
+	<properties>
+		<maven.version>3.0.3</maven.version>
+		<spring.version>3.1.0.RELEASE</spring.version>
 		<spring.security.version>3.0.7.RELEASE</spring.security.version>
 		<slf4j.version>1.6.1</slf4j.version>
 		<hibernate.version>3.6.1.Final</hibernate.version>
@@ -25,13 +26,13 @@
 		<maven.assembly.plugin.version>2.2.1</maven.assembly.plugin.version>
 		<jetty.version>6.1.26</jetty.version>
 		<aspectj.maven.plugin.version>1.4</aspectj.maven.plugin.version>
-    </properties>
-    
-    <prerequisites>
-       <maven>3.0.3</maven>
-    </prerequisites>
-    
-    <dependencies>
+	</properties>
+
+	<prerequisites>
+		<maven>3.0.3</maven>
+	</prerequisites>
+
+	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -47,17 +48,17 @@
 			<artifactId>joda-time</artifactId>
 			<version>1.6.2</version>
 		</dependency>
-        <dependency>
+		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>r06</version>
 		</dependency>
-        <dependency>
+		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>${slf4j.version}</version>
 		</dependency>
-        <dependency>
+		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>${slf4j.version}</version>
@@ -98,43 +99,44 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-    
-    <build>
+
+	<build>
 		<plugins>
-	        <plugin>
-	            <groupId>org.apache.maven.plugins</groupId>
-	            <artifactId>maven-enforcer-plugin</artifactId>
-	            <version>1.2</version>
-	            <executions>
-	                <execution>
-	                    <id>enforce-versions</id>
-	                    <goals>
-	                        <goal>enforce</goal>
-	                    </goals>
-	                    <configuration>
-	                        <rules>
-	                            <requireMavenVersion>
-	                                <version>[${maven.version},)</version>
-	                                <message>Check for Maven version &gt;=${maven.version} failed. Update your Maven install.</message>
-	                            </requireMavenVersion>
-				                <requireJavaVersion>
-				                  <version>1.6</version>
-				                </requireJavaVersion>
-	                        </rules>
-	                    </configuration>
-	                </execution>
-	            </executions>
-	        </plugin>
-	        <plugin>
-	            <groupId>org.codehaus.mojo</groupId>
-	            <artifactId>versions-maven-plugin</artifactId>
-	            <version>2.0</version>
-	        </plugin>
-	        <plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>1.2</version>
+				<executions>
+					<execution>
+						<id>enforce-versions</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireMavenVersion>
+									<version>[${maven.version},)</version>
+									<message>Check for Maven version &gt;=${maven.version} failed.
+										Update your Maven install.</message>
+								</requireMavenVersion>
+								<requireJavaVersion>
+									<version>1.6</version>
+								</requireJavaVersion>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+				<version>2.0</version>
+			</plugin>
+			<plugin>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.1</version>
 			</plugin>
-	        <plugin>
+			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
@@ -202,31 +204,31 @@
 				</executions>
 			</plugin>
 			<plugin>
-        		<groupId>org.codehaus.mojo</groupId>
-        		<artifactId>buildnumber-maven-plugin</artifactId>
-        		<version>1.2</version>
-        		<executions>
-        		    <execution>
-            			<phase>validate</phase>
-            			<goals>
-              				<goal>create</goal>
-            			</goals>
-          			</execution>
-        		</executions>
-        		<configuration>
-        		    <getRevisionOnlyOnce/>
-            		<revisionOnScmFailure/>
-            		<timestampFormat>{0,date,yyyy_MM_dd_HH_mm}</timestampFormat>
-            		<timestampPropertyName>buildNumber</timestampPropertyName>
-            		<buildNumberPropertyName>buildRevision</buildNumberPropertyName>
-            		<format>{1}</format>
-            		<items>
-            			<item>timestamp</item>
-            			<item>scmVersion</item>
-          			</items>
-        		</configuration>
-      		</plugin>
-	    </plugins>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>buildnumber-maven-plugin</artifactId>
+				<version>1.2</version>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>create</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<getRevisionOnlyOnce />
+					<revisionOnScmFailure />
+					<timestampFormat>{0,date,yyyy_MM_dd_HH_mm}</timestampFormat>
+					<timestampPropertyName>buildNumber</timestampPropertyName>
+					<buildNumberPropertyName>buildRevision</buildNumberPropertyName>
+					<format>{1}</format>
+					<items>
+						<item>timestamp</item>
+						<item>scmVersion</item>
+					</items>
+				</configuration>
+			</plugin>
+		</plugins>
 		<resources>
 			<resource>
 				<directory>${basedir}/src/main/resources</directory>
@@ -247,7 +249,7 @@
 		</resources>
 	</build>
 	<profiles>
-	    <profile>
+		<profile>
 			<id>fast</id>
 			<properties>
 				<maven.test.skip>true</maven.test.skip>
@@ -288,7 +290,7 @@
 			</build>
 		</profile>
 	</profiles>
-	
+
 	<reporting>
 		<plugins>
 			<plugin>
@@ -342,7 +344,7 @@
 			</plugin>
 		</plugins>
 	</reporting>
-	
+
 	<repositories>
 		<repository>
 			<id>qcadoo-releases-repository</id>
@@ -407,12 +409,12 @@
 			</snapshots>
 		</repository>
 		<repository>
-		    <id>springsource-repo</id>
-		    <name>SpringSource Repository</name>
-		    <url>http://repo.springsource.org/release</url>
+			<id>springsource-repo</id>
+			<name>SpringSource Repository</name>
+			<url>http://repo.springsource.org/release</url>
 		</repository>
 	</repositories>
-	
+
 	<pluginRepositories>
 		<pluginRepository>
 			<id>qcadoo-releases-plugin-repository</id>
@@ -433,7 +435,7 @@
 		<developerConnection>scm:git:ssh://git@github.com/qcadoo/qcadoo-super-pom-open.git</developerConnection>
 		<url>http://github.com/qcadoo/qcadoo-super-pom-open</url>
 	</scm>
-	
+
 	<distributionManagement>
 		<repository>
 			<id>qcadoo-releases-repository</id>
