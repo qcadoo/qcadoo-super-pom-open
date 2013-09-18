@@ -359,6 +359,18 @@
 			</snapshots>
 		</repository>
 		<repository>
+			<id>maven-central</id>
+			<url>http://repo1.maven.org/maven2/</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+		<repository>
 			<id>jboss-repository</id>
 			<url>https://repository.jboss.org/nexus/content/groups/public/</url>
 			<layout>default</layout>
@@ -397,6 +409,7 @@
 			</snapshots>
 		</repository>
 		<repository>
+			<!-- I found a problem with checksums for artifacts from this repository. Do we really need to use this repository? -->
 			<id>tanesha-repository</id>
 			<url>http://tanesha.net/maven2/</url>
 			<releases>
