@@ -409,19 +409,6 @@
 			</snapshots>
 		</repository>
 		<repository>
-			<!-- I found a problem with checksums for artifacts from this repository. Do we really need to use this repository? -->
-			<id>tanesha-repository</id>
-			<url>http://tanesha.net/maven2/</url>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>never</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-				<updatePolicy>never</updatePolicy>
-			</snapshots>
-		</repository>
-		<repository>
 			<id>springsource-repo</id>
 			<name>SpringSource Repository</name>
 			<url>http://repo.springsource.org/release</url>
