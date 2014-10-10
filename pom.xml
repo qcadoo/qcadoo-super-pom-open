@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.qcadoo.maven</groupId>
@@ -10,12 +10,12 @@
 	<name>Qcadoo Maven Super POM - Open</name>
 
 	<properties>
-		<maven.version>3.0.3</maven.version>
-		<spring.version>3.1.0.RELEASE</spring.version>
-		<spring.security.version>3.0.7.RELEASE</spring.security.version>
+		<maven.version>3.2.1</maven.version>
+		<spring.version>3.2.9.RELEASE</spring.version>
+		<spring.security.version>3.2.3.RELEASE</spring.security.version>
 		<slf4j.version>1.6.1</slf4j.version>
-		<hibernate.version>3.6.1.Final</hibernate.version>
-		<aspectj.version>1.6.12</aspectj.version>
+		<hibernate.version>3.6.9.Final</hibernate.version>
+		<aspectj.version>1.8.2</aspectj.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.eclipse.plugin.version>2.6</maven.eclipse.plugin.version>
@@ -25,11 +25,11 @@
 		<wagon.maven.plugin.version>1.0-beta-4</wagon.maven.plugin.version>
 		<maven.assembly.plugin.version>2.2.1</maven.assembly.plugin.version>
 		<jetty.version>6.1.26</jetty.version>
-		<aspectj.maven.plugin.version>1.4</aspectj.maven.plugin.version>
+		<aspectj.maven.plugin.version>1.7</aspectj.maven.plugin.version>
 	</properties>
 
 	<prerequisites>
-		<maven>3.0.3</maven>
+		<maven>3.2.1</maven>
 	</prerequisites>
 
 	<dependencies>
@@ -51,7 +51,7 @@
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>14.0.1</version>
+			<version>17.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -117,10 +117,11 @@
 								<requireMavenVersion>
 									<version>[${maven.version},)</version>
 									<message>Check for Maven version &gt;=${maven.version} failed.
-										Update your Maven install.</message>
+										Update your Maven install.
+									</message>
 								</requireMavenVersion>
 								<requireJavaVersion>
-									<version>1.6</version>
+									<version>1.8</version>
 								</requireJavaVersion>
 							</rules>
 						</configuration>
@@ -138,10 +139,10 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.1</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -331,7 +332,9 @@
 							<packages>com.qcadoo.mes.view:com.qcadoo.mes.view.*</packages>
 						</group>
 					</groups>
-					<excludePackageNames>*.internal.*:com.qcadoo.mes.application:com.qcadoo.mes.controller:com.qcadoo.mes.beans:com.qcadoo.mes.menu:com.qcadoo.mes.crud:com.qcadoo.mes.plugins:com.qcadoo.mes.products:com.qcadoo.mes.users</excludePackageNames>
+					<excludePackageNames>
+						*.internal.*:com.qcadoo.mes.application:com.qcadoo.mes.controller:com.qcadoo.mes.beans:com.qcadoo.mes.menu:com.qcadoo.mes.crud:com.qcadoo.mes.plugins:com.qcadoo.mes.products:com.qcadoo.mes.users
+					</excludePackageNames>
 					<reportSets>
 						<reportSet>
 							<id>aggregate</id>
