@@ -16,6 +16,7 @@
 		<slf4j.version>1.6.1</slf4j.version>
 		<hibernate.version>3.6.9.Final</hibernate.version>
 		<aspectj.version>1.8.2</aspectj.version>
+		<postgres.version>9.4.1212</postgres.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.eclipse.plugin.version>2.6</maven.eclipse.plugin.version>
