@@ -303,7 +303,7 @@
 									<exclude>**/*$AjcClosure*</exclude>
 									<exclude>com/qcadoo/mes/beans/**/*.class</exclude>
 									<exclude>**/*Advice.class</exclude>
-									<exclude>**/*Aspect.class</exclude>
+									<exclude>**/*Aspect*.class</exclude>
 								</excludes>
 							</instrumentation>
 						</configuration>
