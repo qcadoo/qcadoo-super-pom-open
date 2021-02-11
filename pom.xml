@@ -459,7 +459,7 @@
 		<repository>
 			<id>springsource-repo</id>
 			<name>SpringSource Repository</name>
-			<url>http://repo.springsource.org/release</url>
+			<url>https://repo.spring.io/release</url>
 		</repository>
 	</repositories>
 
