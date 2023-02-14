@@ -22,7 +22,7 @@
 		<maven.eclipse.plugin.version>2.6</maven.eclipse.plugin.version>
 		<maven.javadoc.plugin.version>2.10.3</maven.javadoc.plugin.version>
 		<maven.antrun.plugin.version>1.5</maven.antrun.plugin.version>
-		<wagon.ssh.version>2.2</wagon.ssh.version>
+		<wagon.ssh.version>3.5.3</wagon.ssh.version>
 		<wagon.maven.plugin.version>1.0-beta-4</wagon.maven.plugin.version>
 		<maven.assembly.plugin.version>2.2.1</maven.assembly.plugin.version>
 		<aspectj.maven.plugin.version>1.7</aspectj.maven.plugin.version>
